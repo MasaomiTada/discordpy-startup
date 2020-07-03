@@ -22,6 +22,7 @@ async def on_ready():
 # メンバー数が均等になるチーム分け
 @bot.command()
 async def team(ctx, specified_num=2):
+    await ctx.channel.send('test')
     make_team = MakeTeam()
     remainder_flag = 'true'
     msg = make_team.make_party_num(ctx,specified_num,remainder_flag)
